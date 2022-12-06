@@ -9,6 +9,15 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="manifest" href="manifest.webmanifest">
     <script src="app.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: "2a031a07-6f73-41be-bf05-9722d474b321",
+          });
+        });
+      </script>
   </head>
   <body>
 
@@ -84,6 +93,7 @@
 <div class="container">
   <div class="row text-center">
     <div class="col"><a id="instalar" class="btn btn-danger">Instalar Aplicacion</a></div>
+    <div class="col"><a id="instalarNotificaciones" class="btn btn-danger">Recibir Notificaciones</a></div>
   </div>
 </div>
 <br>
@@ -123,7 +133,32 @@
       });
     });
 
+
+    // //---------------Notificaciones---------------
+    // let botonNotificaciones = document.getElementById("instalarNotificaciones");
+    // botonNotificaciones.addEventListener('click', function(e){
+    //   Notification.requestPermission().then(function(result){
+    //     if (result ==='granted'){
+    //       randomNotification();
+    //     }
+    //   });
+    // });
+
+    // function randomNotification(){
+    //   let nTitle="Titulo Notificacion";
+    //   let nbody="Te Invitamos a conocer nuestro contenido";
+    //   let nImage="./icon/aveja.jpg";
+    //   let options={
+    //     body:nbody,
+    //     icon:nImage
+    //   }
+    //   let notif= new Notification(nTitle, options);
+    //   setTimeout(randomNotification, 10000)
+    // }
 </script>
+
+
+
 
   </body>
 </html>
